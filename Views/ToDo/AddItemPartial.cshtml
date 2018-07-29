@@ -1,0 +1,48 @@
+﻿@model AspNetCoreTodo.Models.ToDoItem
+
+<form asp-action="AddItem" method="post">
+    <label asp-for="Title">Add a new item:</label>
+    <input asp-for="Title" />
+    <button type="submit">Add</button>
+</form>
+
+@*
+            auto-implemented HTML from scaffolding
+    <h4>ToDoItem</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddItemPartial">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="IsDone" /> @Html.DisplayNameFor(model => model.IsDone)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DueAt" class="control-label"></label>
+                    <input asp-for="DueAt" class="form-control" />
+                    <span asp-validation-for="DueAt" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+*@
