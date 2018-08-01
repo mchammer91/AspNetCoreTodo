@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreTodo.Data;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -20,7 +21,7 @@ namespace AspNetCoreTodo.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var admins = (await userManager.GetUsersInRoleAsync("Administrator")).ToList();
+            var admins = (await userManager.GetUsersInRoleAsync(Constants.AdministratorRole)).ToList();
 
             var everyone = await userManager.Users.ToListAsync();
 
